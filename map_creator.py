@@ -4,7 +4,7 @@ def is_blue_hsva(hsva):
     h, s, v, a = hsva
     return 60<h
 
-img = Image.open("map.png").convert("RGBA")
+img = Image.open("input.png").convert("RGBA")
 hsv_img = img.convert("HSV")
 hsv_pixels = hsv_img.load()
 rgba_pixels = img.load()
@@ -36,4 +36,4 @@ for y in range(h):
         else:
             new_pixels[x, y] = (90, 90, 90, 255)
 
-new_img.save("map_transformed.png")
+new_img.save("output.png")
